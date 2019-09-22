@@ -14,3 +14,4 @@ RUN a2enmod rewrite
 RUN a2enmod expires
 RUN a2enmod env
 RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
+RUN service cron start
