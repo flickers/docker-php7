@@ -8,7 +8,7 @@ RUN docker-php-ext-install zip
 RUN docker-php-ext-install exif
 RUN docker-php-ext-install bcmath
 RUN docker-php-ext-configure gd --with-jpeg=/usr/include/ && docker-php-ext-install gd
-RUN pecl install mcrypt-1.0.3 && docker-php-ext-enable mcrypt
+RUN pecl install mcrypt && docker-php-ext-enable mcrypt
 RUN pecl install imagick && docker-php-ext-enable imagick
 RUN a2enmod rewrite
 RUN a2enmod expires
