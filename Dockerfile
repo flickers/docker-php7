@@ -1,6 +1,6 @@
 FROM php:7-apache
 RUN apt -yqq update
-RUN apt -yqq install libxml2-dev zlib1g-dev libzip-dev libpng-dev libjpeg-dev libmagickwand-dev libmcrypt-dev
+RUN apt -yqq install libxml2-dev zlib1g-dev libzip-dev libpng-dev libjpeg-dev libmagickwand-dev libmcrypt-dev libfreetype6-dev
 RUN docker-php-ext-install pdo_mysql
 RUN docker-php-ext-install mysqli
 RUN docker-php-ext-install xml
